@@ -1,0 +1,38 @@
+#main {
+    position: absolute;
+    width: 90%;
+    top: 5%;
+    left:5%;
+    border: 1px solid grey;
+  }
+
+#left{
+    float:left;
+    margin:5%;
+}
+
+#right{
+    float:right;
+    margin:5%;
+    width: 40%;
+}
+
+#addElementTolist{
+    width: 110px;
+}
+
+#searchElementLinear, #searchElementBinary{
+    width: 99px;
+}
+
+ul#menu li {
+    display:inline;
+  }
+
+.list{
+    padding: 5px;
+}
+
+p{
+    padding-left:2%;
+}

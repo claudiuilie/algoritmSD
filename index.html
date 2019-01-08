@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SD Algorithms</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="linearAndBinary.js"></script>
+    <script type="text/javascript" src="binaryTree.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <div class="listValues">
+                <div class="list" style="float:left;">                
+                    <form name="list" action="javascript:addElementToList(addElementTolist.value)">
+                        <span></span>
+                        Creare Lista</br>
+                        <input type="number" name="addElementTolist" id="addElementTolist" min="0" max="999"></br>
+                        <input name="Submit" type="submit" value="Adauga element" />
+                    </form></div>
+                <div class="list" style="float:right">
+                
+                        <form name="searchLinear" action="javascript:linearSearch(searchElementLinear.value)">
+                                Cautare liniara </br>
+                            <input type="number" name="searchElementLinear" id="searchElementLinear" min="0" max="999"></br>
+                            <input name="Submit" type="submit" value="Cauta element" />
+                        </form>
+                    </div>
+                    <div class="list" style="float:right">
+                <form name="searchBinary" action="javascript:binarySearch(searchElementBinary.value)">
+                                Cautare binara   </br>
+                                <input type="number" name="searchElementBinary" id="searchElementBinary" min="0" max="999"></br>
+                                <input name="Submit" type="submit" value="Cauta element" />
+                            </form></br>
+                     </div>       
+                     <div>
+                     </br></br></br>
+                <p style="padding-top:10%;">Lista generata: <span> [</span> <span id="listContent"></span> <span>]</span></p>
+                <p id ="searchResult"></p>  
+                <button style="padding-left:2%;" type="button" onclick="clearList()">Goleste lista</button></br>
+            </div>          
+            </div>
+        </div> 
+            <div id = "right">right
+                <div id="treeForm"></div>
+
+            </div>
+    </div>
+</body>
+
+</html>
