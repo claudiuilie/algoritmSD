@@ -1,6 +1,7 @@
 #main {
     position: absolute;
     width: 90%;
+    height:90%;
     top: 5%;
     left:5%;
     border: 1px solid grey;
@@ -9,12 +10,6 @@
 #left{
     float:left;
     margin:5%;
-}
-
-#right{
-    float:right;
-    margin:5%;
-    width: 40%;
 }
 
 #addElementTolist{

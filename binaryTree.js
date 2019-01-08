@@ -89,30 +89,22 @@ function printTree(BST){
   var mainNode = BST.root.data
   var leftNodes = BST.root.left
   var rightNodes = BST.root.right
-$('#treeForm').append(`
-Arbore Rezultat  </br>
+console.log(`
+Arbore Rezultat  
 
-&emsp;&emsp;&emsp;&nbsp;&nbsp;${mainNode}</br>
-&emsp;&emsp;&emsp;/&nbsp;&nbsp;&nbsp;\\</br>
-&emsp;&emsp;&nbsp;${leftNodes.data}&emsp;&nbsp;&nbsp;${rightNodes.data}</br>
-&emsp;&emsp;/ \\ &emsp;&nbsp;/ \\</br>
-&emsp;&ensp;${leftNodes.left.data}&ensp;   ${leftNodes.right.data} &nbsp;  ${rightNodes.left.data} &nbsp;  ${rightNodes.right.data}</br>
-&emsp;&nbsp;/ \\    &emsp;&emsp;&ensp;  &nbsp;/ &nbsp;&nbsp;\\</br>
-&ensp; ${leftNodes.right.left.data} &nbsp; ${leftNodes.right.right.data}  &emsp;&nbsp;&nbsp;&nbsp; ${rightNodes.right.left.data}&ensp;  ${rightNodes.right.right.data} </br>
+       ${mainNode}
+     /   \\
+   ${leftNodes.data}      ${rightNodes.data}
+  / \\     / \\
+ ${leftNodes.left.data}   ${leftNodes.right.data}   ${rightNodes.left.data}   ${rightNodes.right.data}
+    / \\      / \\
+   ${leftNodes.right.left.data}   ${leftNodes.right.right.data}    ${rightNodes.right.left.data}  ${rightNodes.right.right.data} \n
    `)
 }
+
+setTimeout(printTree(BST), 50); 
 
 console.log(`Parcurgere in ordine recursiv:`);
 BST.inOrderRecursive(BST.root);
 console.log(`Parcurgere in ordine iterativ:`);
 BST.inOrderIterative(BST.root);
-
-
-$(document).ready( function () {
-  printTree(BST);
-});
-
-// Parcurgerea in inordine (stanga –varf – dreapta SVD) – se parcurge mai intai subarborele stang, apoi varful, apoi subarborele drept.
-
-// Two spaces - Type in &ensp;
-// Four spaces - Type in &emsp;
