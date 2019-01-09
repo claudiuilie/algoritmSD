@@ -1,27 +1,6 @@
 
 var list = [];
 
-function addElementToList(elementToAdd) {
-    var numberToAdd = Number(elementToAdd)
-
-    if (numberToAdd != '') {
-        list.push(numberToAdd);
-        $("#listContent").append(`<span id="${numberToAdd}">${numberToAdd} </span>`)
-    } else {
-        console.log('Introduceti un numer!')
-    }
-
-}
-
-function clearList() {
-    $("#listContent").empty();
-    $('#searchResult').html('');
-    $('#addElementTolist').val('');
-    $('#searchElementLinear').val('');
-    $('#searchElementBinary').val('');
-    list.length = 0;
-}
-
 function linearSearch(elementToSearchLinear) {
     for (var i = 0; i < list.length; i++) {
         if (list[i] == elementToSearchLinear) {
@@ -48,7 +27,26 @@ function binarySearch(elementToSearchBinary) {
     return $('#searchResult').html(`Elementul ${elementToSearchBinary} nu a fost gasit in lista.`);
 }
 
+function addElementToList(elementToAdd) {
+    var numberToAdd = Number(elementToAdd)
 
+    if (numberToAdd != '') {
+        list.push(numberToAdd);
+        $("#listContent").append(`<span id="${numberToAdd}">${numberToAdd} </span>`)
+    } else {
+        console.log('Introduceti un numer!')
+    }
+
+}
+
+function clearList() {
+    $("#listContent").empty();
+    $('#searchResult').html('');
+    $('#addElementTolist').val('');
+    $('#searchElementLinear').val('');
+    $('#searchElementBinary').val('');
+    list.length = 0;
+}
 
 
 
