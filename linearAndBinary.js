@@ -16,6 +16,9 @@ function addElementToList(elementToAdd) {
 function clearList() {
     $("#listContent").empty();
     $('#searchResult').html('');
+    $('#addElementTolist').val('');
+    $('#searchElementLinear').val('');
+    $('#searchElementBinary').val('');
     list.length = 0;
 }
 
